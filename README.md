@@ -9,6 +9,16 @@
 _______________________
 Made with
 -----------
+- Task Manager
+    - [Trello](https://trello.com/home)
+- Server Side
+    - [ExpressJS](https://expressjs.com/)
+    - [MongoDB](https://www.mongodb.com/)
+- Server Side
+    - [ReactJS](https://reactjs.org/)
+
+Versions
+--------
 //TODO
 
 To Install
@@ -26,22 +36,15 @@ To run the application you need to write in the terminal the following command:
 ```
 npm start
 ```
-
-To Build
----------
-To build the application you need to write in the terminal the following command:
-
-```
-npm build
-```
-
-Versions
---------
-//TODO
-
+The application will start on [localhost:3000](http://localhost:3000/) if you don't change the port.
 
 Architecture
 -------------
+Server Side
+```
+//TODO
+```
+Client Side
 ```
 //TODO
 ```
