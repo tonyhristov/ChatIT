@@ -8,12 +8,12 @@ large video conference, a small team meeting, or you just want to ask your frien
 question. Because in the end, the important thing is everyone to become part of the conversation.
 
 ------------------------------------------------------------------------------------------------
-![GitHub pull requests](https://img.shields.io/github/issues-pr/tonyhristov/ChatIT?logo=github&logoColor=green&style=for-the-badge)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/tonyhristov/chatit?color=brightgreen&logo=github&logoColor=green&style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/tonyhristov/ChatIT?logo=github&logoColor=brightgreen&style=for-the-badge)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/tonyhristov/ChatIT?color=brightgreen&logo=github&logoColor=brightgreen&style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/tonyhristov/ChatIT?color=blue&logo=github&logoColor=blue&style=for-the-badge)
 
-![GitHub issues](https://img.shields.io/github/issues/tonyhristov/chatit?logo=github&logoColor=yellow&style=for-the-badge)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/tonyhristov/chatit?logo=github&logoColor=green&style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/tonyhristov/ChatIT?color=yellow&logo=github&logoColor=yellow&style=for-the-badge)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/tonyhristov/ChatIT?color=green&logo=github&logoColor=green&style=for-the-badge)
 
 _________________________________________________________________________________________________
 Made with
