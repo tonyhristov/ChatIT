@@ -9,8 +9,11 @@ question. Because in the end, the important thing is everyone to become part of 
 
 ------------------------------------------------------------------------------------------------
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/tonyhristov/ChatIT?logo=github&logoColor=green&style=for-the-badge)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/tonyhristov/ChatIT?logo=github&logoColor=green&style=for-the-badge)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/tonyhristov/chatit?color=brightgreen&logo=github&logoColor=green&style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/tonyhristov/ChatIT?color=blue&logo=github&logoColor=blue&style=for-the-badge)
+
+![GitHub issues](https://img.shields.io/github/issues/tonyhristov/chatit?logo=github&logoColor=yellow&style=for-the-badge)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/tonyhristov/chatit?logo=github&logoColor=green&style=for-the-badge)
 
 _________________________________________________________________________________________________
 Made with
@@ -20,7 +23,7 @@ Made with
 - Server Side
     - [ExpressJS](https://expressjs.com/)
     - [MongoDB](https://www.mongodb.com/)
-- Server Side
+- Client Side
     - [ReactJS](https://reactjs.org/)
 
 
