@@ -26,24 +26,11 @@ Made with
 - Client Side
     - [ReactJS](https://reactjs.org/)
 
-
-
-To Install
+How to Install and Run
 ---------
-To install the application you need to write in the terminal the following command:
-
-```
-npm install
-```
-
-To Run
----------
-To run the application you need to write in the terminal the following command:
-
-```
-npm start
-```
-The application will start on [localhost:3000](http://localhost:3000/) if you don't change the port.
+Check the READMEs for both client and server side
+- [Client Side README](https://github.com/tonyhristov/ChatIT/blob/master/client-side/README.md)
+- [Server Side README](https://github.com/tonyhristov/ChatIT/blob/master/server-side/README.md)
 
 Architecture
 -------------
