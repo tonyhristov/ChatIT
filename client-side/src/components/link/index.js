@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 
 const LinkComponent = ({ title, href, type }) => {
   return (
-    <div>
-      <Link to={href} className={styles[`${type}-list-item`]}>
-        {title}
-      </Link>
-    </div>
+    <Link to={href} className={styles[`${type}-list-item`]}>
+      {title}
+    </Link>
   );
 };
 

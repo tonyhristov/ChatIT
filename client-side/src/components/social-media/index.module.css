@@ -1,0 +1,30 @@
+.h2 {
+  color: #4caf50;
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+}
+
+.instagram {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  background: #4caf50;
+  color: white;
+  float: right;
+}
+
+.facebook {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  background: #4caf50;
+  color: white;
+  float: right;
+}
