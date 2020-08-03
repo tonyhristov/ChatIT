@@ -11,3 +11,11 @@
   background-color: #4caf50;
   color: white;
 }
+
+.link-list-item {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+.link-list-item:hover {
+  color: #4caf50;
+}

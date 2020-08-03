@@ -12,6 +12,10 @@ const getNavigation = (userId) => {
         title: "Home",
         link: "/",
       },
+      {
+        title: "About",
+        link: "/about",
+      },
       // {
       //     title: "Profile",
       //     link: `/profile/${userId}`,
