@@ -1,0 +1,13 @@
+.navigation {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.h1 {
+  color: #88ff70;
+  float: left;
+  text-align: center;
+  padding-left: 27px;
+  text-decoration: none;
+  font-size: 25px;
+}

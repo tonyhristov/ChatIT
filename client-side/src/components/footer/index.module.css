@@ -1,0 +1,20 @@
+.footer {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.h1 {
+  color: #88ff70;
+  float: right;
+  padding: 15px;
+  font-size: 30px;
+}
+
+.rights {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 17px;
+  text-decoration: none;
+  font-size: 25px;
+}
