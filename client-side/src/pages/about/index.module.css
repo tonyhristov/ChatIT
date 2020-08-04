@@ -1,5 +1,5 @@
 .container {
-  background-image: url(../../images/learn-more-photo.jpg);
+  background-image: url(../../images/about-photo.jpg);
   background-position: center;
   background-size: cover;
 
@@ -7,9 +7,17 @@
   border-top: solid #88ff70;
   padding: 10.2%;
   width: 100%;
+  height: 550px;
 }
 
-.h1 {
+.about {
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.h2 {
   color: #4caf50;
   display: inline-block;
+  margin-bottom: 150px;
 }
