@@ -1,0 +1,56 @@
+.about {
+  background-image: url(../../images/about-photo.jpg);
+  background-position: center;
+  background-size: cover;
+
+  border-bottom: solid #88ff70;
+  border-top: solid #88ff70;
+  padding: 10.25%;
+  width: 100%;
+  height: 550px;
+}
+
+.welcome-component {
+  background-image: url(../../images/info-photo.jpg);
+  background-position: center;
+  background-size: cover;
+
+  border-top: solid #88ff70;
+  padding: 10.25%;
+  width: 100%;
+}
+
+.learn-more {
+  background-image: url(../../images/learn-more-photo.jpg);
+  background-position: center;
+  background-size: cover;
+
+  border-bottom: solid #88ff70;
+  border-top: solid #88ff70;
+  padding: 10.25%;
+  width: 100%;
+}
+
+.register {
+  background-image: url(../../images/register-page.jpg);
+  background-position: center;
+  background-size: cover;
+
+  border-bottom: solid #88ff70;
+  border-top: solid #88ff70;
+  padding: 10.25%;
+  width: 100%;
+  height: 555px;
+}
+
+.login {
+  background-image: url(../../images/login.jpg);
+  background-position: center;
+  background-size: cover;
+
+  border-bottom: solid #88ff70;
+  border-top: solid #88ff70;
+  padding: 10.2%;
+  width: 100%;
+  height: 555px;
+}

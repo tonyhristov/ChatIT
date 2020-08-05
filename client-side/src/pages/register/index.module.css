@@ -1,0 +1,15 @@
+.container {
+  background: #333;
+  text-align: center;
+  padding: 3%;
+  width: 45%;
+  height: 85%;
+  position: relative;
+  left: 25%;
+  border: solid 5px #4caf50;
+}
+.h1 {
+  color: #4caf50;
+  padding-bottom: 25px;
+  text-align: center;
+}

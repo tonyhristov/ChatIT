@@ -1,15 +1,3 @@
-.container {
-  background-image: url(../../images/about-photo.jpg);
-  background-position: center;
-  background-size: cover;
-
-  border-bottom: solid #88ff70;
-  border-top: solid #88ff70;
-  padding: 10.2%;
-  width: 100%;
-  height: 550px;
-}
-
 .about {
   color: #4caf50;
   text-align: center;

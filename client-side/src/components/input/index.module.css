@@ -1,0 +1,19 @@
+.container {
+  padding: 1%;
+}
+
+.label {
+  width: 50%;
+  font-size: 25px;
+  color: #4caf50;
+  text-align: center;
+}
+
+.input {
+  border: 1px solid #234465;
+  padding: 1%;
+  width: 35%;
+  border-radius: 3px;
+  color: #333;
+  background: #4caf50;
+}

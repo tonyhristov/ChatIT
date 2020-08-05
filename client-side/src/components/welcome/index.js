@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./index.module.css";
 import LinkComponent from "../link";
+import ImageBackground from "../image-background";
 
 const Welcome = () => {
   return (
-    <div className={styles.container}>
+    <ImageBackground page="welcome-component">
       <div>
         <h1 className={styles.welcome}> Welcome to CHAT IT!</h1>
       </div>
@@ -25,7 +26,7 @@ const Welcome = () => {
         />
         {""}.
       </h1>
-    </div>
+    </ImageBackground>
   );
 };
 
