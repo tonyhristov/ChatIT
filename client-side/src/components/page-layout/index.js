@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
-function PageLayout(props) {
+const PageLayout = (props) => {
   return (
     <div className={styles.app}>
       <Header />
@@ -13,6 +13,6 @@ function PageLayout(props) {
       <Footer />
     </div>
   );
-}
+};
 
 export default PageLayout;

@@ -2,11 +2,12 @@ import React from "react";
 import styles from "./index.module.css";
 import PageLayout from "../../components/page-layout";
 import SocialMedia from "../../components/social-media";
+import ImageBackground from "../../components/image-background";
 
 const AboutPage = () => {
   return (
     <PageLayout>
-      <div className={styles.container}>
+      <ImageBackground page="about">
         <h1 className={styles.about}>Learn more about CHAT IT</h1>
         <h2 className={styles.h2}>
           ChatIT is a Q&A platform for business meetings and events, but it
@@ -20,7 +21,7 @@ const AboutPage = () => {
         </h2>
 
         <SocialMedia />
-      </div>
+      </ImageBackground>
     </PageLayout>
   );
 };
