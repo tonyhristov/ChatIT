@@ -23,7 +23,7 @@ module.exports = {
     },
 
     verifyLogin: (req, res, next) => {
-      const token = req.body.token || "";
+      const token = req.headers.authorization || "";
 
       Promise.all([
         utils.jwt.verifyToken(token),
@@ -42,11 +42,6 @@ module.exports = {
           });
         })
         .catch((err) => {
-          if (!redirectAuthenticated) {
-            next();
-            return;
-          }
-
           if (
             [
               "token expired",
@@ -77,8 +72,7 @@ module.exports = {
           const token = utils.jwt.createToken({
             id: user._id,
           });
-          // res.header("Authorization", token).send(user);
-          res.cookie(config.authCookieName, token).send(user);
+          res.header("Authorization", token).send(user);
         })
         .catch(next);
     },

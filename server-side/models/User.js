@@ -17,8 +17,12 @@ const userSchema = new Schema({
     type: String,
     require: true,
   },
+  imageUrl: {
+    type: String,
+  },
 
   posts: [{ type: ObjectId, ref: "Chats" }],
+  messages: [{ type: ObjectId, ref: "Messages" }],
 });
 
 userSchema.methods = {
