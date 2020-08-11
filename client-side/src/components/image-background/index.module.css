@@ -7,7 +7,7 @@
   border-top: solid #88ff70;
   padding: 10.25%;
   width: 100%;
-  height: 550px;
+  height: 570px;
 }
 
 .welcome-component {
@@ -29,6 +29,7 @@
   border-top: solid #88ff70;
   padding: 10.25%;
   width: 100%;
+  height: 220px;
 }
 
 .register {
@@ -40,7 +41,7 @@
   border-top: solid #88ff70;
   padding: 10.25%;
   width: 100%;
-  height: 555px;
+  height: 570px;
 }
 
 .login {
@@ -52,5 +53,16 @@
   border-top: solid #88ff70;
   padding: 10.2%;
   width: 100%;
-  height: 555px;
+  height: 570px;
+}
+
+.home {
+  background-image: url(../../images/auth-home.jpg);
+  background-size: cover;
+
+  border-bottom: solid #88ff70;
+  border-top: solid #88ff70;
+  padding: 10.25%;
+  width: 100%;
+  height: 570px;
 }
