@@ -19,8 +19,8 @@ const getNavigation = (user) => {
   ];
   const authLinks = [
     {
-      title: "Profile",
-      link: `/profile/${user && user.id}`,
+      title: "My Profile",
+      link: `/my-profile/${user && user.id}`,
     },
     {
       title: "Chats Part Of",
@@ -32,7 +32,7 @@ const getNavigation = (user) => {
     },
     {
       title: "Home",
-      link: "/home",
+      link: `/home/${user && user.id}`,
     },
   ];
 

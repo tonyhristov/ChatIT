@@ -26,7 +26,7 @@ const RegisterPage = () => {
       },
       (user) => {
         context.logIn(user);
-        history.push("/");
+        history.push(`/home/${user.id}`);
       },
       (e) => {
         console.log(e);
