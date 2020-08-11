@@ -1,0 +1,49 @@
+.container {
+  max-width: 100%;
+}
+
+.inner-container {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #4caf50;
+  color: #f2f2f2;
+  padding-top: 35%;
+  padding-bottom: 35%;
+}
+
+.navigation {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.h1 {
+  color: #88ff70;
+  float: left;
+  text-align: center;
+  padding-left: 27px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.footer {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.h1-footer {
+  color: #88ff70;
+  float: right;
+  padding: 15px;
+  font-size: 30px;
+}
+
+.rights {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 17px;
+  text-decoration: none;
+  font-size: 25px;
+}

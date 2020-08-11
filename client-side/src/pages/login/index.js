@@ -1,56 +1,67 @@
-import React, { Component } from "react";
+import React, { Component, useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
 import styles from "./index.module.css";
 import PageLayout from "../../components/page-layout";
 import ImageBackground from "../../components/image-background";
 import Input from "../../components/input";
+import UserContext from "../../context";
+import SubmitButton from "../../components/button/submit-button";
+import authenticate from "../../utils/authenticate";
 
-class LoginPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: "",
-      rePassword: "",
-    };
-  }
+const LoginPage = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const context = useContext(UserContext);
+  const history = useHistory();
 
-  onChange = (event, type) => {
-    const newState = {};
-    newState[type] = event.target.value;
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    this.setState(newState);
+    await authenticate(
+      "http://localhost:9999/api/user/login",
+      {
+        username,
+        password,
+      },
+      (user) => {
+        context.logIn(user);
+        history.push("/");
+      },
+      (e) => {
+        console.log(e);
+      }
+    );
   };
 
-  render() {
-    const { username, password, rePassword } = this.state;
+  return (
+    <PageLayout>
+      <ImageBackground page="login">
+        <div className={styles.login}>
+          <h1 className={styles["h1"]}>Login Page</h1>
 
-    return (
-      <PageLayout>
-        <ImageBackground page="login">
-          <div className={styles.login}>
-            <h1 className={styles["h1"]}>Login Page</h1>
+          <div className={styles.form}>
+            <form onSubmit={handleSubmit}>
+              <Input
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                label="Username"
+                id="username"
+              />
+              <Input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                label="Password"
+                id="password"
+                type="password"
+              />
 
-            <div className={styles.form}>
-              <form>
-                <Input
-                  value={username}
-                  onChange={(e) => this.onChange(e, "username")}
-                  label="Username"
-                  id="username"
-                />
-                <Input
-                  value={password}
-                  onChange={(e) => this.onChange(e, "password")}
-                  label="Password"
-                  id="password"
-                />
-              </form>
-            </div>
+              <SubmitButton title="Login" />
+            </form>
           </div>
-        </ImageBackground>
-      </PageLayout>
-    );
-  }
-}
+        </div>
+      </ImageBackground>
+    </PageLayout>
+  );
+};
 
 export default LoginPage;
