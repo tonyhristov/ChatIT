@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import getNavigation from "../../utils/navigation";
 import styles from "./index.module.css";
 import LinkComponent from "../link";
+import UserContext from "../../context";
 
 const Header = () => {
-  const links = getNavigation();
+  const context = useContext(UserContext);
+  const { user } = context;
+  const links = getNavigation(user);
 
   return (
     <header className={styles.navigation}>

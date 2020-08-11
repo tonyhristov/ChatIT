@@ -13,6 +13,7 @@ const Navigation = () => {
         <Route path="/about" component={AboutPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/login" component={LoginPage} />
+        {/*<Route path="/home" component={AuthHomePage} />*/}
       </Switch>
     </BrowserRouter>
   );

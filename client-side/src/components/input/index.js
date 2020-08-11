@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
 
-const Input = ({ label, id, value, onChange }) => {
+const Input = ({ label, id, value, onChange, type }) => {
   return (
     <div className={styles.container}>
       <label
@@ -12,7 +12,12 @@ const Input = ({ label, id, value, onChange }) => {
       >
         {label}:
         <div>
-          <input className={styles.input} id={id} align="middle" />
+          <input
+            type={type || "text"}
+            className={styles.input}
+            id={id}
+            align="middle"
+          />
         </div>
       </label>
     </div>
