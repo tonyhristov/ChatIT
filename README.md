@@ -79,6 +79,6 @@ Authenticated Home
 
 ![login](https://github.com/tonyhristov/ChatIT/blob/master/images/login-page.png)
 
-## Login Page
+## Register Page
 
 ![register](https://github.com/tonyhristov/ChatIT/blob/master/images/register-page.png)
