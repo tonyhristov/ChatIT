@@ -19,9 +19,11 @@ const userSchema = new Schema({
   },
   imageUrl: {
     type: String,
+    default:
+      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
   },
 
-  posts: [{ type: ObjectId, ref: "Chats" }],
+  chats: [{ type: ObjectId, ref: "Chats" }],
   messages: [{ type: ObjectId, ref: "Messages" }],
 });
 
