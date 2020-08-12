@@ -59,13 +59,9 @@ Client Side
 
 ---
 
-#Images
+## Images
 
----
-
-Home
-
----
+## Home Pages
 
 Guest Home
 
@@ -74,3 +70,15 @@ Guest Home
 Authenticated Home
 
 ![authenticated home](https://github.com/tonyhristov/ChatIT/blob/master/images/home-loggedIn-user-page.jpg)
+
+## About Page
+
+![about](https://github.com/tonyhristov/ChatIT/blob/master/images/about-page.png)
+
+## Login Page
+
+![login](https://github.com/tonyhristov/ChatIT/blob/master/images/login-page.png)
+
+## Login Page
+
+![register](https://github.com/tonyhristov/ChatIT/blob/master/images/register-page.png)
