@@ -6,6 +6,7 @@ import AboutPage from "./pages/about";
 import RegisterPage from "./pages/register";
 import LoginPage from "./pages/login";
 import AuthHomePage from "./pages/auth-home";
+import ProfilePage from "./pages/profile";
 
 const Navigation = () => {
   const context = useContext(UserContext);
@@ -15,14 +16,20 @@ const Navigation = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={HomePage} />
-        <Route path="/home/:userId" component={AuthHomePage} />
+        <Route path="/home/:userId">
+          {loggedIn ? <AuthHomePage /> : <Redirect to="/login" />}
+        </Route>
         <Route path="/about" component={AboutPage} />
+        <Route path="/my-profile/:userId" component={AuthHomePage}>
+          {loggedIn ? <ProfilePage /> : <Redirect to="/login" />}
+        </Route>
 
-        {/*{loggedIn ? (<ProfilePage />): (<Redirect to="/login" />)}*/}
-        {/*{loggedIn ? (<Redirect to="/" />) : (<RegisterPage />)}*/}
-
-        <Route path="/register" component={RegisterPage} />
-        <Route path="/login" component={LoginPage} />
+        <Route path="/register">
+          {loggedIn ? <Redirect to="/" /> : <RegisterPage />}
+        </Route>
+        <Route path="/login">
+          {loggedIn ? <Redirect to="/" /> : <LoginPage />}
+        </Route>
       </Switch>
     </BrowserRouter>
   );

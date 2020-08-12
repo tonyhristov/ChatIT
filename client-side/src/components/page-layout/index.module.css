@@ -4,12 +4,7 @@
 }
 
 .container {
-  width: 100%;
-
-  text-align: center;
-}
-.inner-container {
-  display: inline-block;
+  /*display: inline-block;*/
   width: 83%;
   height: auto;
 }

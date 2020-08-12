@@ -18,20 +18,24 @@ const RegisterPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await authenticate(
-      "http://localhost:9999/api/user/register",
-      {
-        username,
-        password,
-      },
-      (user) => {
-        context.logIn(user);
-        history.push(`/home/${user.id}`);
-      },
-      (e) => {
-        console.log(e);
-      }
-    );
+    if (password === rePassword) {
+      await authenticate(
+        "http://localhost:9999/api/user/register",
+        {
+          username,
+          password,
+        },
+        (user) => {
+          context.logIn(user);
+          history.push(`/home/${user.id}`);
+        },
+        (e) => {
+          alert("Something went wrong. Please try again.");
+        }
+      );
+    } else {
+      alert("Password does not match!");
+    }
   };
 
   return (
