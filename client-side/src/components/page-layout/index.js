@@ -8,7 +8,7 @@ const PageLayout = (props) => {
     <div className={styles.app}>
       <Header />
 
-      <div className={styles["inner-container"]}>{props.children}</div>
+      <div className={styles.container}>{props.children}</div>
 
       <Footer />
     </div>

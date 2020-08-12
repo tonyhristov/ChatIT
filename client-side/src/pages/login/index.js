@@ -28,7 +28,7 @@ const LoginPage = () => {
         history.push(`/home/${user.id}`);
       },
       (e) => {
-        console.log(e);
+        alert("Username or Password are not valid! Please try correct ones.");
       }
     );
   };
