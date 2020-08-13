@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 import UserContext from "../../context";
 import Loading from "../../components/loading";
 import PageLayout from "../../components/page-layout";
-import LinkComponent from "../../components/link";
+import MyChats from "../../components/my-chats";
 
 const ProfilePage = () => {
   const [username, setUsername] = useState(null);
@@ -59,7 +59,14 @@ const ProfilePage = () => {
             </button>
           </div>
           <div>
-            <button className={styles.button}>Create Chat</button>
+            <button
+              className={styles.button}
+              onClick={() => {
+                history.push(`/${params.userId}/create-chat`);
+              }}
+            >
+              Create Chat
+            </button>
           </div>
           <div>
             <button
@@ -86,6 +93,9 @@ const ProfilePage = () => {
         <div className={styles["container-chats"]}>
           <h1 className={styles["h1-chats"]}>My Chats</h1>
           <hr className={styles.hr} />
+        </div>
+        <div>
+          <MyChats />
         </div>
       </div>
     </PageLayout>

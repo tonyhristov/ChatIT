@@ -17,10 +17,10 @@ module.exports = {
       .limit(length)
       .populate("author")
       .then((chats) => {
-        const filtered = chats.filter((origami) => {
+        const filtered = chats.filter((chats) => {
           const author = req.headers.referer;
 
-          return chats.author._id == author.split("/").pop();
+          return chats.author.id == author.split("/").pop();
         });
 
         res.send(filtered);
