@@ -1,0 +1,38 @@
+.container {
+  background-color: #4caf50;
+  border-top: solid #f2f2f2;
+  border-bottom: solid #f2f2f2;
+  padding: 2%;
+  width: 96%;
+  height: 5%;
+  margin-bottom: 0;
+
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+
+.container-buttons {
+  float: right;
+  width: 47%;
+  display: inline-block;
+}
+
+.info {
+  float: left;
+  color: #f2f2f2;
+
+  width: 25%;
+}
+
+.button {
+  width: 40%;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+  float: right;
+  background-color: #333333;
+  color: #f2f2f2;
+  border: solid #f2f2f2;
+}
