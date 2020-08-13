@@ -9,6 +9,7 @@ import AuthHomePage from "./pages/auth-home";
 import ProfilePage from "./pages/profile";
 import UpdatePasswordPage from "./pages/update-password";
 import UpdateProfileImagePage from "./pages/update-profile-image";
+import CreateChatPage from "./pages/create-chat";
 
 const Navigation = () => {
   const context = useContext(UserContext);
@@ -22,21 +23,23 @@ const Navigation = () => {
           {loggedIn ? <AuthHomePage /> : <Redirect to="/login" />}
         </Route>
         <Route path="/about" component={AboutPage} />
-        <Route path="/my-profile/:userId" component={AuthHomePage}>
+        <Route path="/my-profile/:userId">
           {loggedIn ? <ProfilePage /> : <Redirect to="/login" />}
         </Route>
-        <Route path="/update-password/:userId" component={AuthHomePage}>
+        <Route path="/update-password/:userId">
           {loggedIn ? <UpdatePasswordPage /> : <Redirect to="/login" />}
         </Route>
-        <Route path="/update-profile-image/:userId" component={AuthHomePage}>
+        <Route path="/update-profile-image/:userId">
           {loggedIn ? <UpdateProfileImagePage /> : <Redirect to="/login" />}
         </Route>
-
         <Route path="/register">
           {loggedIn ? <Redirect to="/" /> : <RegisterPage />}
         </Route>
         <Route path="/login">
           {loggedIn ? <Redirect to="/" /> : <LoginPage />}
+        </Route>
+        <Route path="/:userId/create-chat">
+          {loggedIn ? <CreateChatPage /> : <Redirect to="/login" />}
         </Route>
       </Switch>
     </BrowserRouter>

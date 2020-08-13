@@ -24,11 +24,11 @@ const getNavigation = (user) => {
     },
     {
       title: "Chats Part Of",
-      link: `/chats-part-of`,
+      link: `/${user && user.id}/chats-part-of`,
     },
     {
       title: "Create Chat",
-      link: `/create-chat`,
+      link: `/${user && user.id}/create-chat`,
     },
     {
       title: "Home",
