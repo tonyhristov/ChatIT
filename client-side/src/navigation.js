@@ -7,6 +7,8 @@ import RegisterPage from "./pages/register";
 import LoginPage from "./pages/login";
 import AuthHomePage from "./pages/auth-home";
 import ProfilePage from "./pages/profile";
+import UpdatePasswordPage from "./pages/update-password";
+import UpdateProfileImagePage from "./pages/update-profile-image";
 
 const Navigation = () => {
   const context = useContext(UserContext);
@@ -22,6 +24,12 @@ const Navigation = () => {
         <Route path="/about" component={AboutPage} />
         <Route path="/my-profile/:userId" component={AuthHomePage}>
           {loggedIn ? <ProfilePage /> : <Redirect to="/login" />}
+        </Route>
+        <Route path="/update-password/:userId" component={AuthHomePage}>
+          {loggedIn ? <UpdatePasswordPage /> : <Redirect to="/login" />}
+        </Route>
+        <Route path="/update-profile-image/:userId" component={AuthHomePage}>
+          {loggedIn ? <UpdateProfileImagePage /> : <Redirect to="/login" />}
         </Route>
 
         <Route path="/register">

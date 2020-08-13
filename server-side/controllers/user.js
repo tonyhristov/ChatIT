@@ -1,6 +1,7 @@
 const models = require("../models");
 const config = require("../config/config");
 const utils = require("../utils");
+const bcrypt = require("bcrypt");
 
 module.exports = {
   get: (req, res, next) => {
@@ -90,11 +91,28 @@ module.exports = {
     },
   },
 
-  put: (req, res, next) => {
+  put: async (req, res, next) => {
     const id = req.params.id;
-    const { username, password } = req.body;
-    models.User.update({ _id: id }, { username, password })
-      .then((updatedUser) => res.send(updatedUser))
+    const { password } = req.body;
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    models.User.findByIdAndUpdate(id, { password: hashedPassword })
+      .then((updatedUser) => {
+        res.send(updatedUser);
+      })
+      .catch(next);
+  },
+
+  changeImage: async (req, res, next) => {
+    const id = req.params.id;
+    const { imageUrl } = req.body;
+
+    models.User.findByIdAndUpdate(id, { imageUrl: imageUrl })
+      .then((updatedUser) => {
+        res.send(updatedUser);
+      })
       .catch(next);
   },
 
