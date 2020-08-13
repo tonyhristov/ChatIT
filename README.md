@@ -22,6 +22,8 @@ question. Because in the end, the important thing is everyone to become part of 
 
 - Task Manager
   - [Trello](https://trello.com/home)
+- File Storage
+  - [Cloudinary](https://cloudinary.com/)
 - Server Side
   - [ExpressJS](https://expressjs.com/)
   - [MongoDB](https://www.mongodb.com/)
