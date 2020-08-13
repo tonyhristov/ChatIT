@@ -12,6 +12,7 @@ router.get("/verify", controllers.user.post.verifyLogin);
 router.post("/logout", controllers.user.post.logout);
 
 router.put("/:id", controllers.user.put);
+router.put("/image/:id", controllers.user.changeImage);
 
 router.delete("/:id", controllers.user.delete);
 

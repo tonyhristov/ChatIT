@@ -105,6 +105,17 @@ module.exports = {
       .catch(next);
   },
 
+  changeImage: async (req, res, next) => {
+    const id = req.params.id;
+    const { imageUrl } = req.body;
+
+    models.User.findByIdAndUpdate(id, { imageUrl: imageUrl })
+      .then((updatedUser) => {
+        res.send(updatedUser);
+      })
+      .catch(next);
+  },
+
   delete: (req, res, next) => {
     const id = req.params.id;
     models.User.deleteOne({ _id: id })
