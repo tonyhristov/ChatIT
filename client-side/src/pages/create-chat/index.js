@@ -25,7 +25,7 @@ const CreateChatPage = () => {
     });
 
     setChat("");
-    history.push(`/home/${params.userId}`);
+    history.push(`/my-profile/${params.userId}`);
     alert("You have successfully created a chat");
   };
 

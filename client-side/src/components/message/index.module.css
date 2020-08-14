@@ -1,0 +1,16 @@
+.container {
+  background-color: #4caf50;
+  border-top: solid #f2f2f2;
+  border-bottom: solid #f2f2f2;
+  padding: 2%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #f2f2f2;
+}
+.user {
+  color: #f2f2f2;
+}

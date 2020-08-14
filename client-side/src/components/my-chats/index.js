@@ -12,7 +12,7 @@ const MyChats = () => {
   }, []);
 
   const renderChats = () => {
-    return chats.map((chats, index) => {
+    return chats.map((chats) => {
       return <Chat key={chats._id} {...chats} />;
     });
   };

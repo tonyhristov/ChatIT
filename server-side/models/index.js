@@ -1,9 +1,11 @@
 const User = require("./User");
-const Chats = require("./Chat");
+const Chat = require("./Chat");
+const Message = require("./Message");
 const TokenBlacklist = require("./TokenBlacklist");
 
 module.exports = {
   User,
-  Chats,
+  Chat,
+  Message,
   TokenBlacklist,
 };
