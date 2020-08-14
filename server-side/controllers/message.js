@@ -2,12 +2,15 @@ const models = require("../models");
 
 module.exports = {
   getMessages: (req, res, next) => {
-    const id = req.params.id;
-
     models.Message.find()
+      // .populate("author")
       .then((messages) => {
         const filtered = messages.filter((messages) => {
-          return messages.chat == id;
+          // return messages.chat == id;
+
+          const author = req.headers.referer;
+
+          return messages.chat == author.split("/").pop();
         });
 
         res.send(filtered);
@@ -17,10 +20,17 @@ module.exports = {
 
   post: (req, res, next) => {
     const { message, chatId } = req.body;
-    const { _id } = req.user;
+    const { _id, username } = req.user;
     const id = req._id;
 
-    models.Message.create({ message, author: _id, chat: chatId })
+    console.log(req.user);
+
+    models.Message.create({
+      message,
+      author: _id,
+      authorUsername: username,
+      chat: chatId,
+    })
       .then((createdChat) => {
         return Promise.all([
           models.User.updateOne({ _id }, { $push: { messages: createdChat } }),

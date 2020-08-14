@@ -14,6 +14,9 @@ const MessagesSchema = new Schema(
       type: ObjectId,
       ref: "User",
     },
+    authorUsername: {
+      type: String,
+    },
     chat: {
       type: ObjectId,
       ref: "Chat",
