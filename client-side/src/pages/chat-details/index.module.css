@@ -14,12 +14,14 @@
 
 .title {
   text-align: center;
+  margin-bottom: 10%;
   color: #4caf50;
 }
 
 .send {
   background: #333;
   text-align: center;
+  margin-top: 5%;
   padding: 3%;
   width: 45%;
   height: 85%;
