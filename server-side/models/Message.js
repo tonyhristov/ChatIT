@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 const Model = mongoose.model;
 const { String, Number, Boolean, ObjectId } = Schema.Types;
 
-const ChatsSchema = new Schema(
+const MessagesSchema = new Schema(
   {
-    name: {
+    message: {
       type: String,
       required: true,
     },
@@ -14,20 +14,12 @@ const ChatsSchema = new Schema(
       type: ObjectId,
       ref: "User",
     },
-    participants: [
-      {
-        type: ObjectId,
-        ref: "User",
-      },
-    ],
-    messages: [
-      {
-        type: ObjectId,
-        ref: "Message",
-      },
-    ],
+    chat: {
+      type: ObjectId,
+      ref: "Chat",
+    },
   },
   { timestamps: { createdAt: "created_at" } }
 );
 
-module.exports = new Model("Chat", ChatsSchema);
+module.exports = new Model("Message", MessagesSchema);

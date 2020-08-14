@@ -1,0 +1,37 @@
+.container {
+  background-color: #333;
+  border-top: solid #88ff70;
+  border-bottom: solid #88ff70;
+  padding: 10.25%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+
+.title {
+  text-align: center;
+  color: #4caf50;
+}
+
+.send {
+  background: #333;
+  text-align: center;
+  padding: 3%;
+  width: 45%;
+  height: 85%;
+  position: relative;
+  left: 25%;
+  border: solid 5px #4caf50;
+}
+.textarea {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  resize: none;
+  height: 10vh;
+  font-size: 20px;
+}

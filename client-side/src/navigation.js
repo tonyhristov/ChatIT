@@ -10,6 +10,7 @@ import ProfilePage from "./pages/profile";
 import UpdatePasswordPage from "./pages/update-password";
 import UpdateProfileImagePage from "./pages/update-profile-image";
 import CreateChatPage from "./pages/create-chat";
+import ChatDetails from "./pages/chat-details";
 
 const Navigation = () => {
   const context = useContext(UserContext);
@@ -40,6 +41,9 @@ const Navigation = () => {
         </Route>
         <Route path="/:userId/create-chat">
           {loggedIn ? <CreateChatPage /> : <Redirect to="/login" />}
+        </Route>
+        <Route path="/chat-details/:userId">
+          {loggedIn ? <ChatDetails /> : <Redirect to="/login" />}
         </Route>
       </Switch>
     </BrowserRouter>

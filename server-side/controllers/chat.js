@@ -1,11 +1,8 @@
 const models = require("../models");
 
 module.exports = {
-  get: (req, res, next) => {
-    const length = req.query.length ? parseInt(req.query.length) : 20;
-    models.Chats.find()
-      .sort("-created_at")
-      .limit(length)
+  getChat: (req, res, next) => {
+    models.Chat.findOne({ "_id.$oid": req._id })
       .populate("author")
       .then((chats) => res.send(chats))
       .catch(next);
@@ -13,7 +10,7 @@ module.exports = {
 
   getCurrentUserPosts: (req, res, next) => {
     const length = req.query.length ? parseInt(req.query.length) : 20;
-    models.Chats.find()
+    models.Chat.find()
       .limit(length)
       .populate("author")
       .then((chats) => {
@@ -32,7 +29,7 @@ module.exports = {
     const { name } = req.body;
     const { _id } = req.user;
 
-    models.Chats.create({ name, author: _id })
+    models.Chat.create({ name, author: _id })
       .then((createdChat) => {
         return Promise.all([
           models.User.updateOne({ _id }, { $push: { chats: createdChat } }),
@@ -46,16 +43,18 @@ module.exports = {
   },
 
   put: (req, res, next) => {
-    const id = req.params.id;
+    const id = req.params._id;
     const { name } = req.body;
-    models.Chats.updateOne({ _id: id }, { name })
-      .then((updatedChat) => res.send(updatedChat))
+    models.Chat.findByIdAndUpdate(id, { name })
+      .then((updatedUser) => {
+        res.send(updatedUser);
+      })
       .catch(next);
   },
 
   delete: (req, res, next) => {
     const id = req.params.id;
-    models.Chats.deleteOne({ _id: id })
+    models.Chat.deleteOne({ _id: id })
       .then((removedChat) => res.send(removedChat))
       .catch(next);
   },
