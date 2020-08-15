@@ -11,6 +11,7 @@ import UpdatePasswordPage from "./pages/update-password";
 import UpdateProfileImagePage from "./pages/update-profile-image";
 import CreateChatPage from "./pages/create-chat";
 import ChatDetails from "./pages/chat-details";
+import JoinChat from "./pages/join-chat";
 
 const Navigation = () => {
   const context = useContext(UserContext);
@@ -44,6 +45,9 @@ const Navigation = () => {
         </Route>
         <Route path="/chat-details/:userId">
           {loggedIn ? <ChatDetails /> : <Redirect to="/login" />}
+        </Route>
+        <Route path="/join-chat/:userId">
+          {loggedIn ? <JoinChat /> : <Redirect to="/login" />}
         </Route>
       </Switch>
     </BrowserRouter>

@@ -14,7 +14,6 @@ const Messages = (props) => {
   }, []);
 
   const renderMessages = () => {
-    console.log(messages);
     return messages.map((messages) => {
       return <Message key={messages._id} {...messages} />;
     });

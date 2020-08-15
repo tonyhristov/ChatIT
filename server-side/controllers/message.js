@@ -9,7 +9,6 @@ module.exports = {
 
           return messages.chat == author.split("/").pop();
         });
-
         res.send(filtered);
       })
       .catch(next);

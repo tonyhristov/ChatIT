@@ -31,6 +31,10 @@ const getNavigation = (user) => {
       link: `/${user && user.id}/create-chat`,
     },
     {
+      title: "Join Chat",
+      link: `/join-chat/${user && user.id}`,
+    },
+    {
       title: "Home",
       link: `/home/${user && user.id}`,
     },

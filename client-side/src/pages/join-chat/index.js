@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import PageLayout from "../../components/page-layout";
-import getCookie from "../../utils/cookie";
-import styles from "./index.module.css";
+import { useHistory } from "react-router-dom";
+import styles from "../create-chat/index.module.css";
 import Input from "../../components/input";
 import SubmitButton from "../../components/button/submit-button";
+import PageLayout from "../../components/page-layout";
+import getCookie from "../../utils/cookie";
 
-const CreateChatPage = () => {
+const JoinChat = () => {
   const [chat, setChat] = useState("");
   const history = useHistory();
-  const params = useParams();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await fetch("http://localhost:9999/api/chats/create-chat", {
-      method: "POST",
+
+    const promise = await fetch(`http://localhost:9999/api/chats/join-chat`, {
+      method: "PUT",
       body: JSON.stringify({
         name: chat,
       }),
@@ -24,25 +24,26 @@ const CreateChatPage = () => {
       },
     });
 
-    setChat("");
-    history.push(`/my-profile/${params.userId}`);
-    alert("You have successfully created a chat");
+    const response = await promise.json();
+
+    history.push(`/chat-details/${response._id}`);
+    alert("You have successfully joined a chat");
   };
 
   return (
     <PageLayout>
       <div className={styles.container}>
         <div className={styles["inner-container"]}>
-          <h1 className={styles.h1}>Create Chat</h1>
+          <h1 className={styles.h1}>Join Chat</h1>
           <form className={styles.form} onSubmit={handleSubmit}>
             <Input
               value={chat}
               onChange={(e) => setChat(e.target.value)}
-              label="Enter name for the chat"
+              label="Enter name of the chat you want to join"
               id="chat"
             />
 
-            <SubmitButton title="Create Chat" />
+            <SubmitButton title="Join Chat" />
           </form>
         </div>
       </div>
@@ -50,4 +51,4 @@ const CreateChatPage = () => {
   );
 };
 
-export default CreateChatPage;
+export default JoinChat;
