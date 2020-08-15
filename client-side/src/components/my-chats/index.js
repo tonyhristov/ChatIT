@@ -12,9 +12,13 @@ const MyChats = () => {
   }, []);
 
   const renderChats = () => {
-    return chats.map((chats) => {
-      return <Chat key={chats._id} {...chats} />;
-    });
+    if (chats.length > 0) {
+      return chats.map((chats) => {
+        return <Chat key={chats._id} {...chats} />;
+      });
+    } else {
+      return <h1 className={styles.empty}>Currently you haven't created chats.</h1>;
+    }
   };
 
   useEffect(() => {

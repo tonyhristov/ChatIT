@@ -33,7 +33,7 @@ module.exports = {
       .then((createdChat) => {
         return Promise.all([
           models.User.updateOne({ _id }, { $push: { chats: createdChat } }),
-          models.Chats.findOne({ _id: createdChat._id }),
+          models.Chat.findOne({ _id: createdChat._id }),
         ]);
       })
       .then(([modifiedObj, chatObj]) => {
@@ -43,11 +43,24 @@ module.exports = {
   },
 
   put: (req, res, next) => {
-    const id = req.params._id;
+    const { _id } = req.user;
     const { name } = req.body;
-    models.Chat.findByIdAndUpdate(id, { name })
-      .then((updatedUser) => {
-        res.send(updatedUser);
+
+    models.Chat.findOneAndUpdate(
+      { name: name },
+      {
+        $addToSet: {
+          participants: [_id],
+        },
+      }
+    )
+      .then((updatedChat) => {
+        models.User.findByIdAndUpdate(_id, {
+          $addToSet: {
+            participatedIn: [updatedChat._id],
+          },
+        });
+        res.send(updatedChat);
       })
       .catch(next);
   },
