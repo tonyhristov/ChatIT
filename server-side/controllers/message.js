@@ -28,7 +28,9 @@ module.exports = {
       .then((createdChat) => {
         return Promise.all([
           models.User.updateOne({ _id }, { $push: { messages: createdChat } }),
-          models.Chat.updateOne({ id }, { $push: { messages: createdChat } }),
+          models.Chat.findByIdAndUpdate(id, {
+            $addToSet: { messages: createdChat },
+          }).then((message) => {}),
           models.Message.findOne({ _id: createdChat._id }),
         ]);
       })

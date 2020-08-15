@@ -3,7 +3,8 @@ const router = require("express").Router();
 const { auth } = require("../utils");
 
 router.get("/getChat/:id", controllers.chat.getChat);
-router.get("/currentUserPosts", controllers.chat.getCurrentUserPosts);
+router.get("/currentUserChats", controllers.chat.getCurrentUserChats);
+router.get("/chats-part-of", controllers.chat.getChatsPartOf);
 
 router.post("/create-chat", auth(), controllers.chat.post);
 

@@ -34,9 +34,11 @@ const ChatDetails = () => {
 
   const getChat = useCallback(async () => {
     const promise = await fetch(
-      `http://localhost:9999/api/chats/getChat/${params.id}`
+      `http://localhost:9999/api/chats/getChat/${params.userId}`
     );
     const chat = await promise.json();
+
+    console.log()
 
     setChat(chat);
     setMessages(chat.messages);

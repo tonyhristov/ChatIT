@@ -19,3 +19,11 @@
 .link-list-item:hover {
   color: #4caf50;
 }
+
+.no-chat-link-list-item {
+  color: #4caf50;
+  text-decoration: none;
+}
+.no-chat-link-list-item:hover {
+  color: #f2f2f2;
+}
