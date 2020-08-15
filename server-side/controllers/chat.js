@@ -2,13 +2,15 @@ const models = require("../models");
 
 module.exports = {
   getChat: (req, res, next) => {
-    models.Chat.findOne({ "_id.$oid": req._id })
+    models.Chat.findById(req.params.id)
       .populate("author")
-      .then((chats) => res.send(chats))
+      .then((chats) => {
+        res.send(chats);
+      })
       .catch(next);
   },
 
-  getCurrentUserPosts: (req, res, next) => {
+  getCurrentUserChats: (req, res, next) => {
     const length = req.query.length ? parseInt(req.query.length) : 20;
     models.Chat.find()
       .limit(length)
@@ -21,6 +23,15 @@ module.exports = {
         });
 
         res.send(filtered);
+      })
+      .catch(next);
+  },
+  getChatsPartOf: (req, res, next) => {
+    const CurrentUser = req.headers.referer;
+    models.User.findById(CurrentUser.split("/").pop())
+      .populate("participatedIn")
+      .then((user) => {
+        res.send(user.participatedIn);
       })
       .catch(next);
   },
@@ -59,7 +70,8 @@ module.exports = {
           $addToSet: {
             participatedIn: [updatedChat._id],
           },
-        });
+        }).then((user) => {});
+
         res.send(updatedChat);
       })
       .catch(next);
