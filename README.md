@@ -84,3 +84,31 @@ Authenticated Home
 ## Register Page
 
 ![register](https://github.com/tonyhristov/ChatIT/blob/master/images/register-page.png)
+
+## My Profile Page
+
+![my profile](https://github.com/tonyhristov/ChatIT/blob/master/images/my-profile-page.png)
+
+## Change Password Page
+
+![change password](https://github.com/tonyhristov/ChatIT/blob/master/images/change-password-page.png)
+
+## Change Profile Image Page
+
+![change profile image](https://github.com/tonyhristov/ChatIT/blob/master/images/change-profile-image-page.png)
+
+## Create Chat Page
+
+![create chat image](https://github.com/tonyhristov/ChatIT/blob/master/images/create-chat-page.png)
+
+## Join Chat Page
+
+![join chat image](https://github.com/tonyhristov/ChatIT/blob/master/images/join-chat-page.png)
+
+## Chat Details Page
+
+![chat details image](https://github.com/tonyhristov/ChatIT/blob/master/images/chat-details-page.png)
+
+## Chat Part Of Page
+
+![chat part of image](https://github.com/tonyhristov/ChatIT/blob/master/images/chats-part-of-page.png)
