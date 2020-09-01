@@ -78,3 +78,86 @@
   width: 100%;
   height: 580px;
 }
+
+@media screen and (max-width: 870px) {
+  .about {
+    background-image: url(../../images/about-photo.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-bottom: solid #88ff70;
+    border-top: solid #88ff70;
+    padding: 10.25%;
+    width: 100%;
+    height: auto;
+  }
+
+  .welcome-component {
+    background-image: url(../../images/info-photo.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-top: solid #88ff70;
+    padding: 10.25%;
+    width: 100%;
+  }
+
+  .learn-more {
+    background-image: url(../../images/learn-more-photo.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-bottom: solid #88ff70;
+    border-top: solid #88ff70;
+    padding: 10.25%;
+    width: 100%;
+    height: auto;
+  }
+
+  .register {
+    background-image: url(../../images/register-page.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-bottom: solid #88ff70;
+    border-top: solid #88ff70;
+    padding: 10.25%;
+    width: 100%;
+    height: auto;
+  }
+
+  .login {
+    background-image: url(../../images/login.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-bottom: solid #88ff70;
+    border-top: solid #88ff70;
+    padding: 10.2%;
+    width: 100%;
+    height: auto;
+  }
+
+  .home {
+    background-image: url(../../images/auth-home.jpg);
+    background-size: cover;
+
+    border-bottom: solid #88ff70;
+    border-top: solid #88ff70;
+    padding: 10.25%;
+    width: 100%;
+    height: auto;
+  }
+
+  .change-password {
+    background-image: url(../../images/change-password.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-bottom: solid #88ff70;
+    border-top: solid #88ff70;
+    padding: 10.2%;
+    width: 100%;
+    height: auto;
+  }
+}

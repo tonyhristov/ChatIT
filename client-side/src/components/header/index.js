@@ -12,16 +12,19 @@ const Header = () => {
   return (
     <header className={styles.navigation}>
       <h1 className={styles["h1"]}>CHAT IT</h1>
-      {links.map((navElement) => {
-        return (
-          <LinkComponent
-            key={navElement.title}
-            href={navElement.link}
-            title={navElement.title}
-            type={"header"}
-          />
-        );
-      })}
+
+      <div className={styles["header-links"]}>
+        {links.map((navElement) => {
+          return (
+            <LinkComponent
+              key={navElement.title}
+              href={navElement.link}
+              title={navElement.title}
+              type={"header"}
+            />
+          );
+        })}
+      </div>
     </header>
   );
 };
