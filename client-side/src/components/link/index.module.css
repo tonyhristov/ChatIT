@@ -12,6 +12,23 @@
   color: white;
 }
 
+@media screen and (max-width: 870px) {
+  .header-list-item {
+    float: none;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+  }
+  .header-list-item:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+}
+
+/* links */
 .link-list-item {
   color: #f2f2f2;
   text-decoration: none;
@@ -20,6 +37,7 @@
   color: #4caf50;
 }
 
+/* no chat links */
 .no-chat-link-list-item {
   color: #4caf50;
   text-decoration: none;

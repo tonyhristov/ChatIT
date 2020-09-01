@@ -11,3 +11,28 @@
   text-decoration: none;
   font-size: 25px;
 }
+
+.header-links {
+  display: block;
+  float: right;
+}
+
+@media screen and (max-width: 870px) {
+  .navigation {
+    display: block;
+    overflow: hidden;
+    background-color: #333;
+  }
+  .header-links {
+    display: block;
+    float: none;
+    margin-top: 20%;
+  }
+  .h1 {
+    width: 85%;
+    color: #88ff70;
+    text-decoration: none;
+    font-size: 25px;
+    float: left;
+  }
+}
