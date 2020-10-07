@@ -2,12 +2,14 @@ import React, { useCallback, useEffect, useState } from "react";
 import styles from "./index.module.css";
 import getMyChat from "../../utils/chats";
 import Chat from "../chat";
+import { useParams } from "react-router-dom";
 
 const MyChats = () => {
   const [chats, setChats] = useState([]);
+  const params = useParams();
 
   const getChats = useCallback(async () => {
-    const chats = await getMyChat();
+    const chats = await getMyChat(params.userId);
     setChats(chats);
   }, []);
 
@@ -17,7 +19,9 @@ const MyChats = () => {
         return <Chat key={chats._id} {...chats} />;
       });
     } else {
-      return <h1 className={styles.empty}>Currently you haven't created chats.</h1>;
+      return (
+        <h1 className={styles.empty}>Currently you haven't created chats.</h1>
+      );
     }
   };
 

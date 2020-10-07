@@ -9,7 +9,7 @@ const Messages = (props) => {
   const params = useParams();
 
   const getData = useCallback(async () => {
-    const promise = await getMessages();
+    const promise = await getMessages(params.userId);
     setMessages(promise);
   }, []);
 

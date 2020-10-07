@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import PageLayout from "../../components/page-layout";
 import styles from "./index.module.css";
 import NoChats from "../../components/no-chats";
@@ -7,9 +8,10 @@ import ChatPartOf from "../../components/chat-part-of";
 
 const ChatsPartOfPage = () => {
   const [chats, setChats] = useState([]);
+  const params = useParams();
 
   const getChats = useCallback(async () => {
-    const chats = await getChatsPartOf();
+    const chats = await getChatsPartOf(params.userId);
     console.log(chats);
     setChats(chats);
   }, []);
