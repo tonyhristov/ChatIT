@@ -17,9 +17,9 @@ module.exports = {
       .populate("author")
       .then((chats) => {
         const filtered = chats.filter((chats) => {
-          const author = req.headers.referer;
+          const author = req.headers.userid;
 
-          return chats.author.id == author.split("/").pop();
+          return chats.author.id == author;
         });
 
         res.send(filtered);
@@ -27,8 +27,9 @@ module.exports = {
       .catch(next);
   },
   getChatsPartOf: (req, res, next) => {
-    const CurrentUser = req.headers.referer;
-    models.User.findById(CurrentUser.split("/").pop())
+    const CurrentUser = req.headers.userid;
+    console.log(req.headers);
+    models.User.findById(CurrentUser)
       .populate("participatedIn")
       .then((user) => {
         res.send(user.participatedIn);

@@ -5,9 +5,9 @@ module.exports = {
     models.Message.find()
       .then((messages) => {
         const filtered = messages.filter((messages) => {
-          const author = req.headers.referer;
+          const author = req.headers.userid;
 
-          return messages.chat == author.split("/").pop();
+          return messages.chat == author;
         });
         res.send(filtered);
       })
